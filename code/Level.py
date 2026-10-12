@@ -44,6 +44,7 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                ent.animate()
                 if isinstance(ent, (Player, Enemy)):
                     shoot = ent.shoot()
                     if shoot is not None:
