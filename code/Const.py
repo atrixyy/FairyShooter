@@ -23,6 +23,8 @@ ENTITY_SPEED = {
     'Level1Bg0' : 0,
     'Level1Bg1' : 2,
     'Level1Bg2' : 4,
+    'Level1Bg3' : 8,
+    'Level1Bg4' : 10,
     'Level2Bg0': 0,
     'Level2Bg1': 2,
     'Level2Bg2': 4,
@@ -45,6 +47,8 @@ ENTITY_HEALTH = {
     'Level1Bg0': 999,
     'Level1Bg1': 999,
     'Level1Bg2': 999,
+    'Level1Bg3': 999,
+    'Level1Bg4': 999,
     'Level2Bg0': 999,
     'Level2Bg1': 999,
     'Level2Bg2': 999,
@@ -67,6 +71,8 @@ ENTITY_DAMAGE = {
     'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
     'Level2Bg0': 0,
     'Level2Bg1': 0,
     'Level2Bg2': 0,
@@ -101,6 +107,8 @@ ENTITY_SCORE = {
     'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
     'Level2Bg0': 0,
     'Level2Bg1': 0,
     'Level2Bg2': 0,
@@ -122,8 +130,8 @@ ENTITY_SCORE = {
 ENTITY_SHOT_DELAY = {
     'Player1' : 20,
     'Player2' : 15,
-    'Enemy1': 150,
-    'Enemy2': 200,
+    'Enemy1': 50,
+    'Enemy2': 100,
 
 }
 
@@ -152,13 +160,31 @@ PLAYER_KEY_SHOOT = {'Player2': pygame.K_RCTRL,
 
 
 # S
-SPAWN_TIME = 2000
+SPAWN_TIME = 3000
+
 
 # T
-TIMEOUT_LEVEL = 20000
+TIMEOUT_LEVEL = 20500
 TIMEOUT_STEP: int = 100
 
 # W
 WIN_WIDTH = 1600
 WIN_HEIGHT = 900
 
+#S again because of the WIN_WIDTH
+SCORE_POS = {
+    'Title': (WIN_WIDTH / 2, 100),
+    'EnterName': (WIN_WIDTH / 2, 250),
+    'Label': (WIN_WIDTH / 2, 330),
+    'Name': (WIN_WIDTH / 2, 390),
+    0: (WIN_WIDTH / 2, 450),
+    1: (WIN_WIDTH / 2, 490),
+    2: (WIN_WIDTH / 2, 530),
+    3: (WIN_WIDTH / 2, 570),
+    4: (WIN_WIDTH / 2, 610),
+    5: (WIN_WIDTH / 2, 650),
+    6: (WIN_WIDTH / 2, 690),
+    7: (WIN_WIDTH / 2, 730),
+    8: (WIN_WIDTH / 2, 770),
+    9: (WIN_WIDTH / 2, 810),
+}

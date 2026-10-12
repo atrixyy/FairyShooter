@@ -11,7 +11,7 @@ from code.Const import WIN_WIDTH, C_PINK, MENU_OPTION, C_WHITE, C_YELLOW, C_GRAY
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load("./asset/game_background_1.png").convert_alpha()
+        self.surf = pygame.image.load("./asset/Menu.png").convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
@@ -21,14 +21,14 @@ class Menu:
         while True:
             #Draw Images
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(200, "Fairy", C_RED, ((WIN_WIDTH / 2), 170))
-            self.menu_text(170, "Shooter", C_RED, ((WIN_WIDTH / 2), 300))
+            self.menu_text(200, "Fairy", C_BLUE, ((WIN_WIDTH / 2), 170))
+            self.menu_text(170, "Shooter", C_BLUE, ((WIN_WIDTH / 2), 300))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(50, MENU_OPTION[i], C_GREEN, ((WIN_WIDTH / 2), 600 + i * 60))
+                    self.menu_text(50, MENU_OPTION[i], C_PINK, ((WIN_WIDTH / 2), 600 + i * 60))
                 else:
-                    self.menu_text(50, MENU_OPTION[i], C_RED, ((WIN_WIDTH / 2), 600 + i * 60))
+                    self.menu_text(50, MENU_OPTION[i], C_BLUE, ((WIN_WIDTH / 2), 600 + i * 60))
             pygame.display.flip()
 
             #Check for all events
